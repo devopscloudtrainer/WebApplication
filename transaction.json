@@ -1,0 +1,12 @@
+1. soft reset: This is very safest reset because it will move HEAD of previous stage, here we dont change anything in staging area and working directory
+
+command: git reset --soft commit_id
+
+2. mixed reset: Default reset option
+                This will remove changes from staging index & local repo and doesn't change anything in working area.
+
+command: git reset --mixed commit_id
+                  (OR)
+        git reset commit_id
+ 
+3. hard reset: This is most critical reset which will remove everything till the commit mentioned that means it will clean the working/staging/local area.
