@@ -10,3 +10,24 @@ command: git reset --mixed commit_id
         git reset commit_id
  
 3. hard reset: This is most critical reset which will remove everything till the commit mentioned that means it will clean the working/staging/local area.
+Stash is an temporary storage location for storing the changes of working directory and staging area.
+
+eg: feature - login-feature  -> feature-branch -> middle of the development.
+
+    Urgent hotfix - live issue - fixed in 1 hour
+
+    To fix - he needs to switch branch -> challenge -> * Complete the work 
+                                                       * Rollback the work 
+
+    Git Recommends -> before switching branch -> Either your commit the changes or rollback the changes.
+ 
+
+commands: git stash list                         // list all the stash indexes
+          git stash save "messages"              // create an stash and save changes in temporary location.
+          git stash show stash_index             // list the detailed info about stashes
+          git stash apply stash_index            // Apply will bring out the changes from stash area to working/staging area
+                                                   and also keep an copy of stash index in stash location.
+          git stash pop stash_index              // Apply will bring out the changes from stash area to working/staging area
+                                                   and also delete the copy of stash index in stash location. 
+          git stash drop stash_index            // delete stash from stash area
+  
